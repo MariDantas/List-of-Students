@@ -12,8 +12,6 @@ Private Sub btnUpdate_Click()
     Dim obj As OLEObject
     Dim countActiv As Integer
     Dim line As Integer
-    Dim what As Boolean
-    Dim what2 As Boolean
     
     countActiv = 0
     line = 6
@@ -30,8 +28,6 @@ Private Sub btnUpdate_Click()
     
     For Each cell In Range("J1:S1")
         If (cell.Value <> "Class activity") And (Not (IsEmpty(cell.Value))) Then
-            what = cell.Value <> "Class activity" Or IsEmpty(cell.Value)
-            what2 = Not IsEmpty(cell.Value)
             countActiv = countActiv + 1
         End If
         
